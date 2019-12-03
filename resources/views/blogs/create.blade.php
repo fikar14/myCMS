@@ -31,7 +31,13 @@
                                     <slug-widget url="{{url('/blog')}}/" :title="title" @slug-changed="updateSlug"></slug-widget>
                                     <input type="hidden" v-model="slug" name="slug" />
                                 </div>
-                                <br>
+                                <div class="field">
+                                    <blog-post :blog="blog" @blog-changed="updateBlog"></blog-post>
+                                    <input type="hidden" v-model="blog" name="blog" />
+                                </div>
+                                {{-- <br>                                
+                                <textarea class="textarea" name="blog" id="blog" rows="30" v-model="blog" placeholder="Make original content don't copy paste!!!">
+                                </textarea>
                                 <b-field>
                                     <b-input type="textarea"
                                         name="blog"
@@ -39,13 +45,45 @@
                                         rows="30"
                                         placeholder="Make original content don't copy paste!!!">
                                     </b-input>
-                                </b-field>
+                                </b-field> --}}
                             </div>
                             <div class="column is-3">
                                 <div class="columns">
                                     <div class="column is-full">
                                         <div class="card">
                                             <div class="card-content">
+                                                <div class="field">
+                                                    <div class="media-content">
+                                                        <figure class="image container is-128x128 has-addons has-addons-right">
+                                                            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image">
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="media-content">
+                                                        <p class="title is-5 has-text-centered">Zulfikar</p>
+                                                        <p class="subtitle is-6 has-text-centered">@fikar14</p>
+                                                    </div>
+                                                </div>                                             
+                                            </div>                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-full">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <div class="field">
+                                                    <label for="">Category</label>
+                                                    <p class="control">
+                                                        <select name="blogcategories[]" id="blogcategories" class="{{ $errors->has('blogcategories') ? 'is-invalid':'' }}">
+                                                            <option value="">Pilih</option>
+                                                            @foreach ($blogcategories as $row)
+                                                            <option value="{{ $row->name }}">{{ $row->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </p>
+                                                </div>
                                                 <div class="field">
                                                     <label for="">Blog Cover</label>
                                                     <p class="control">
@@ -56,21 +94,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="columns">
                                     <div class="column is-full">
                                         <div class="card">
                                             <div class="card-content">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                    <figure class="image is-48x48">
-                                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                                                    </figure>
-                                                    </div>
-                                                    <div class="media-content">
-                                                        <p class="title is-5">Zulfikar</p>
-                                                        <p class="subtitle is-6">@fikar14</p>
-                                                    </div>
-                                                </div>
                                                 <div class="media">
                                                     <div class="media-content">
                                                     <p class="is-size-7 has-text-centered"><strong>Draft Saved</strong> a few minutes ago (saved)</p>
@@ -84,10 +112,10 @@
                                                         <button class="button is-success is-fullwidth" name="save_action" value="PUBLISH">Publish</button>
                                                     </div>
                                                 </div>
-                                            </div>                                                    
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </form> <!-- end of form -->                        
@@ -110,7 +138,7 @@
                     cover: null
 
                     // api_token: '{{Auth::user()}}'
-
+                    
                 }       
 
                 
@@ -119,6 +147,9 @@
             methods: {
                 updateSlug: function(val){
                     this.slug = val;
+                },
+                updateBlog: function(val){
+                    this.blog = val;
                 }
             }
         });

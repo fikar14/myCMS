@@ -23,9 +23,9 @@
                 <ul class="submenu">
                   <li><a href="/blogs/create"><i class="fas fa-plus-square"></i> <span>Add Post</span></a>
                   </li>
-                  <li><a href="/blog"><i class="fas fa-list-alt"></i> <span>All Posts</span></a>
+                  <li><a href="/blogs"><i class="fas fa-list-alt"></i> <span>All Posts</span></a>
                   </li>
-                  <li><a href="/blog/category"><i class="fas fa-hashtag"></i> <span>Category</span></a>
+                  <li><a href="/blog-categories"><i class="fas fa-hashtag"></i> <span>Category</span></a>
                   </li>
                 </ul>
               </li> 
