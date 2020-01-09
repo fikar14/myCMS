@@ -22,9 +22,30 @@ class ProkumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('produkhukum.index');
+        $prokum = Prokum::latest()->paginate(10);
+
+        // menangkap data pencarian
+		$search = $request->search;
+		$search2 = $request->search2;
+		$search3 = $request->search3;
+		$search4 = $request->search4;
+ 
+        // mengambil data dari table prokum sesuai pencarian data
+        if($search || $search2 || $search3 || $search4){
+            $prokum = Prokum::where([
+                ['nomor','like',"%".$search."%"],
+                ['tahun','like',"%".$search2."%"],
+                ['desa','like',"%".$search3."%"],
+                ['judul','like',"%".$search4."%"],
+            ])->paginate(10);
+        }
+        else{
+            $prokum = Prokum::latest()->paginate(10);
+        }
+
+        return view('produkhukum.index', ['prokum'=>$prokum]);
     }
 
     /**
@@ -48,10 +69,10 @@ class ProkumController extends Controller
     public function store(Request $request)
     {
         \Validator::make($request->all(),[
-            "jenis" => "required|min:4|max:100",
-            "nomor" => "required|min:4|max:100",
-            "judul" => "required|min:4|max:250",
+            "nomor" => "required|min:2|max:100",
             "tahun" => "required|min:4|max:100",
+            "desa" => "required|min:4|max:100",
+            "judul" => "required|min:4|max:250",
             ])->validate();
 
             if($request->hasFile('fileupload')) {
@@ -70,14 +91,14 @@ class ProkumController extends Controller
             }
 
             $prokum = Prokum::firstOrCreate([
-                'jenis' => $request->jenis,
                 'nomor' => $request->nomor,
-                'judul' => $request->judul,
                 'tahun' => $request->tahun,
+                'desa' => $request->desa,
+                'judul' => $request->judul,
                 'fileupload' => $fileNameToStore,
             ]);
             
-            return redirect()->route('produkhukum.create')->with('status', 'Produk Hukum Berhasil ditambahkan');
+            return redirect()->route('produkhukum.index')->with('status', 'Produk Hukum Berhasil ditambahkan');
     }
 
     /**
@@ -123,5 +144,10 @@ class ProkumController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function prokumde()
+    {
+        return view('produkhukum.prokumdesa');
     }
 }

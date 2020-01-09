@@ -24,39 +24,85 @@
                 <span>Beranda</span>
             </a>
 
-            <a class="navbar-item" href="/profile">
+            {{-- <a class="navbar-item" href="/profile">
                 <span>Profil</span> 
-            </a>
+            </a> --}}
 
-            <a class="navbar-item" href="/berita">
-                <span>Berita</span> 
-            </a>
-
-            <a class="navbar-item" href="/produk-hukum">
-                <span>Produk Hukum</span> 
-            </a>
-
-            {{-- <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
-                    <span class="icon"><i class="fa fa-book"></i></span>
-                    <span>Produk</span> 
+                    <span>Profil</span> 
                 </a>
 
                 <div class="navbar-dropdown">
                     <a class="navbar-item">
-                        Peraturan Pemerintah Daerah
+                        Visi
                     </a>
                     <a class="navbar-item">
-                        Peraturan Presiden
+                        Misi
                     </a>
                     <a class="navbar-item">
-                        Peraturan Bupati
+                        Tugas Pokok
                     </a>
                     <a class="navbar-item">
-                        Peraturan Bupati
+                        Tujuan
+                    </a>
+                    <a class="navbar-item">
+                        Fungsi
+                    </a>
+                    <a class="navbar-item">
+                        Struktur Organisasi
+                    </a>
+                    <a class="navbar-item">
+                        SOP
                     </a>
                 </div>
-            </div> --}}
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    <span>Produk Hukum</span> 
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/produk-hukum">
+                        Peraturan Daerah
+                    </a>
+                    <a class="navbar-item">
+                        Peraturan Bupati
+                    </a>
+                    <a class="navbar-item">
+                        Keputusan Bupati
+                    </a>
+                </div>
+            </div>
+            
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    <span>Produk Hukum Desa</span> 
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Peraturan Desa
+                    </a>
+                    <a class="navbar-item">
+                        Peraturan Kepala Desa
+                    </a>
+                </div>
+            </div>
+
+            <a class="navbar-item" href="/produk-hukum">
+                <span>Galery Foto</span> 
+            </a>
+
+            <a class="navbar-item" href="/produk-hukum">
+                <span>Forum Interaktif</span> 
+            </a>
+            
+            <a class="navbar-item" href="/berita">
+                <span>Berita</span> 
+            </a>
+
             <a class="navbar-item" href="/kontak">
                 <span>Kontak</span> 
             </a>

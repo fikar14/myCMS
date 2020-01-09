@@ -76,10 +76,10 @@
                                                 <div class="field">
                                                     <label for="">Category</label>
                                                     <p class="control">
-                                                        <select name="blogcategories[]" id="blogcategories" class="{{ $errors->has('blogcategories') ? 'is-invalid':'' }}">
+                                                        <select name="category_id" id="category_id" class="{{ $errors->has('category_id') ? 'is-invalid':'' }}">
                                                             <option value="">Pilih</option>
                                                             @foreach ($blogcategories as $row)
-                                                            <option value="{{ $row->name }}">{{ $row->name }}</option>
+                                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </p>

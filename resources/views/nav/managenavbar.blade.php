@@ -30,8 +30,11 @@
                 </ul>
               </li> 
               <li>
-                <a href="/produkhukum/create"><i class="fas fa-gavel"></i> <span>Produk Hukum</span></a>
+                <a href="/produk-hukum-daerah"><i class="fas fa-gavel"></i> <span>Produk Hukum Daerah</span></a>
               </li>             
+              <li>
+                <a href="/produkhukum"><i class="fas fa-gavel"></i> <span>Produk Hukum Desa</span></a>
+              </li>
             </ul>
             <p class="menu-label">
               Administration

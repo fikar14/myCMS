@@ -23,6 +23,8 @@ Vue.component('slug-category', require('./components/Slug-category.vue').default
 Vue.component('role-create', require('./components/Role-create.vue').default);
 Vue.component('profile-page', require('./components/forms/Profile-page.vue').default);
 Vue.component('blog-post', require('./components/forms/Blog-post.vue').default);
+Vue.component('prokum-daerah', require('./components/frontpages/Prokumda.vue').default);
+Vue.component('prokum-desa', require('./components/frontpages/Prokumde.vue').default);
 
 /**
 * Vue Router
@@ -34,5 +36,6 @@ Vue.component('blog-post', require('./components/forms/Blog-post.vue').default);
 // Vue.use(VueRouter);
 
 // const app = new Vue({
-//     el: '#app'
+//     el: '#app',
+//     router
 // });

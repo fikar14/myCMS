@@ -54,12 +54,16 @@ class BlogController extends Controller
             "blog" => "required"
             ])->validate();
 
+        $blogcategories = BlogCategory::find(1);
+
         $blog = new Blog;
         $blog->title = $request->get('title');
         $blog->blog = $request->get('blog');
         $blog->slug = $request->get('slug');
         $blog->status = $request->get('save_action');
         $blog->user_id = auth()->id();
+        $blog->category_id = $request->get('category_id');
+        
 
         if($request->hasFile('cover')) {
             // Get filename with extension            
@@ -79,15 +83,13 @@ class BlogController extends Controller
         $blog->cover = $fileNameToStore;
         $blog->save();
 
-        $blog->blogcategories()->attach($request->get('blogcategories'));
-
         if($request->get('save_action') == 'PUBLISH'){
         return redirect()
-            ->route('home')
+            ->route('blogs.index')
             ->with('status', 'Book successfully saved and published');
         } else {
         return redirect()
-            ->route('blogs.create')
+            ->route('blogs.index')
             ->with('status', 'Book saved as draft');
         }
     }

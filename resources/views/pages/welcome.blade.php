@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class="hero is-link is-large">
+    <section class="hero is-link is-medium">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <span class="logo">
@@ -15,7 +15,7 @@
                     Pemerintah Kabupaten Kepulauan Anambas
                 </h2>
                 
-                <div class="columns is-centered m-t-20">
+                {{-- <div class="columns is-centered m-t-20">
                     <div class="column is-3 ">
                         <div class="field has-addons">
                             <div class="control">
@@ -28,55 +28,106 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>           
         </div>
     </section>
 
     <section class="columns is-multiline is-centered">
-        <div class="column is-2 is-narrow">
-            <div class="card card-top has-text-centered">
-                <img class="img-card m-t-20" src="{{ asset('images/Garuda-100x100.png') }}">
+        <div class="column is-6 is-narrow">
+            <div class="card card-top">
+                {{-- <img class="img-card m-t-20" src="{{ asset('images/Garuda-100x100.png') }}"> --}}
+                <header class="card-header">
+                    <p class="card-header-title">
+                        PENCARIAN KEBIJAKAN
+                    </p>
+                </header>
                 <div class="card-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, culpa.</p>
+                    <div class="columns">
+                        <div class="column is-10 is-offset-1">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Jenis Kebijakan</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <div class="select is-link is-fullwidth">
+                                                <select>
+                                                    <option>Semua Kebijakan</option>
+                                                    <option>PERATURAN PRESIDEN</option>
+                                                    <option>PERATURAN GUBERNUR</option>
+                                                    <option>PERATURAN BUPATI</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Tahun</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control ">
+                                            <div class="select is-link is-fullwidth">
+                                                <select>
+                                                    <option>Semua</option>
+                                                    <option>2020</option>
+                                                    <option>2019</option>
+                                                    <option>2018</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Nomor</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-link" type="text" placeholder="Find a repository">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Tentang</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-link" type="text" placeholder="Find a repository">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <footer class="card-footer">
-                    <a href="#" class="card-footer-item has-background-link has-text-white">Peraturan Presiden</a>
-                </footer>
-            </div>
-        </div>
-        <div class="column is-2">
-            <div class="card card-top has-text-centered">
-                <img class="img-card m-t-20" src="{{ asset('images/Prov-100x100.png') }}">
-                <div class="card-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eveniet.</p>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item has-background-link has-text-white">Peraturan Gubernur</a>
-                </footer>
-            </div>
-        </div>
-        <div class="column is-2">
-            <div class="card card-top has-text-centered">
-                <img class="card-img m-t-20" src="{{ asset('images/KKA-100x100.png') }}">
-                <div class="card-content">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, deserunt.</p>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item has-background-link has-text-white">Peraturan Daerah</a>
+                    <a href="#" class="card-footer-item has-background-link has-text-white">Cari</a>
                 </footer>
             </div>
         </div>
     </section>
 
-    <section class="columns has-text-centered m-t-100">
+    {{-- <section class="columns has-text-centered m-t-100">
         <div class="column">
             <h3 class="title is-3">Produk Hukum Terbaru</h3>
             <div class="ct-section_header-separator"></div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="content">       
+    {{-- <section class="content">       
     <section class="container is-centered">
         <div class="columns is-multiline m-t-20">
             @foreach ($prokum as $p)
@@ -109,7 +160,7 @@
             @endforeach   
         </div>
     </section>
-    </section>
+    </section> --}}
 
     <section class="columns has-text-centered m-t-100">
         <div class="column">

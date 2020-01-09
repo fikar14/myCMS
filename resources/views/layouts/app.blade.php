@@ -25,7 +25,8 @@
         <div id="app">
             @include('nav.navbar')
             @include('nav.adminmenu')
-            @yield('content')
+            @yield('content')            
+
             @include('nav.footer')
         </div>
     </div>
