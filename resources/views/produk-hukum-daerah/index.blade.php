@@ -59,10 +59,11 @@
                         placeholder="Filter by Judul"/>
                 </div>
                 <div class="column is-1">
-                    <input
-                        type="submit"
-                        value="Filter"
-                        class="button is-link is-fullwidth">
+                    <button class="button is-link">
+                        <span class="icon is-small">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
                 </div>
             </div>
         </form>
@@ -70,7 +71,7 @@
         <div class="columns">
             <div class="column">
                 <div class="card-content">
-                    <table class="table is-narrow is-fullwidth">
+                    <table class="table is-striped is-fullwidth">
                         <thead>
                             <tr>
                                 <th>Bentuk</th>
@@ -96,14 +97,14 @@
                                 <td>{{ $prokum->abstrak }}</td>
                                 <td>
                                     @if($prokum->file)
-                                        <a href="{{ asset('storage/prokum/'.$prokum->file) }}" target="_blank">{{ $prokum->file }}</a></td>
+                                        <a href="{{ asset('/storage/prokumda/'.$prokum->file) }}" target="_blank"><i class="fas fa-download"></i></a></td>
                                     @else
                                         File Kosong 
                                     @endif
                                 </td>
                                 <td>
                                     @if($prokum->lampiran)
-                                        <a href="{{ asset('storage/prokum/lampiran/'.$prokum->lampiran) }}" target="_blank">{{ $prokum->lampiran }}</a></td>
+                                        <a href="{{ asset('/storage/lampiran/'.$prokum->lampiran) }}" target="_blank"><i class="fas fa-download"></i></a></td>
                                     @else
                                         File Kosong 
                                     @endif
@@ -126,6 +127,7 @@
                 </div>
             </div>
         </div>
+        {{$prokumda->links()}}
     </div>
 </div>
 

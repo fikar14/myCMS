@@ -49,3 +49,7 @@ Route::get('/kontak', 'PageController@kontak')->name('kontak');
 // Route::get('/produk-hukum/search', 'PageController@search');
 // Route::get('/produk-hukum', 'PageController@prokum')->name('produk-hukum');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

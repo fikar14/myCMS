@@ -33,8 +33,8 @@
         </div>
     </section>
 
-    <section class="columns is-multiline is-centered">
-        <div class="column is-6 is-narrow">
+    <section class="columns is-multiline pencarian is-centered">
+        <div class="column is-6 is-narrow m-t-150">
             <div class="card card-top">
                 {{-- <img class="img-card m-t-20" src="{{ asset('images/Garuda-100x100.png') }}"> --}}
                 <header class="card-header">
@@ -162,61 +162,133 @@
     </section>
     </section> --}}
 
-    <section class="columns has-text-centered m-t-100">
-        <div class="column">
-            <h3 class="title is-3">Berita & Informasi</h3>
-            <span class="ct-section_header-separator"></span>
-        </div>
-    </section>
-
-    <section class="columns m-t-20">
-        <div class="column">
-            <div class="tile is-ancestor">
-                <div class="tile is-vertical is-8">
-                    <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                        <article class="tile is-child notification is-link">
-                        <p class="title">Berita Anambas #1</p>
-                        <p class="subtitle">Post-1</p>
-                        </article>
-                        <article class="tile is-child notification is-warning">
-                        <p class="title">Berita Anambas #2</p>
-                        <p class="subtitle">Post-2</p>
-                        </article>
+    <div class="container">
+        <section class="columns has-text-centered m-t-150">
+            <div class="column">
+                <h3 class="title is-3">Berita & Informasi</h3>
+                <span class="ct-section_header-separator"></span>
+            </div>
+        </section>
+    
+        <section class="columns m-t-20 m-b-50">
+            <div class="column">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                        <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                            <div class="card">
+                                <article class="tile is-child notification">
+                                <p class="title">Berita Anambas #1</p>
+                                {{-- <p class="subtitle">Post-1</p> --}}
+                                <p class="has-text-justified">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae dolor quaerat vel magnam! Nisi iure sapiente, fugiat animi, ipsam sed voluptate enim architecto eos repellat doloribus, reprehenderit eligendi sequi veniam omnis nulla provident atque vero cum! Tenetur perspiciatis similique placeat iste deserunt minima labore alias esse. Corrupti,
+                                </p>
+                                </article>
+                            </div>
+                            <div class="card">
+                                <article class="tile is-child notification">
+                                <p class="title">Berita Anambas #2</p>
+                                {{-- <p class="subtitle">Post-2</p> --}}
+                                <p class="has-text-justified">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, accusamus veniam! Dicta sit, corrupti totam rem necessitatibus delectus nihil quidem. Dolor harum, quos, distinctio quis minus, veniam hic dignissimos omnis nemo autem blanditiis officiis eligendi. Vitae sapiente veritatis libero voluptatum harum! Reprehenderit earum voluptates expedita inventore doloribus aliquid ab nam.
+                                </p>
+                                <br><br>
+                                <p class="has-text-justified">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda magnam culpa cumque, velit neque nesciunt incidunt, quibusdam fugit fugiat adipisci earum sunt praesentium nisi at! Accusantium, fugit aperiam iusto laudantium quo modi! Numquam vero, nulla dolores atque qui fuga temporibus harum possimus. Reprehenderit minus vero esse ut, nemo nobis repellendus pariatur incidunt doloremque aliquid deleniti. Impedit praesentium, architecto culpa sunt minima temporibus, facilis, inventore maxime modi accusantium reiciendis obcaecati vero porro ratione placeat blanditiis quibusdam harum sapiente perspiciatis atque provident rerum beatae nobis? Consequatur, veniam? Aperiam id, molestiae ut eum, autem sunt, explicabo reiciendis perferendis commodi maiores officia repudiandae natus.
+                                </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <div class="card">
+                                <article class="tile is-child notification">
+                                <p class="title">Galeri</p>
+                                <p class="subtitle">Foto Dokumentasi JDIH</p>
+                                <figure class="image">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7Eh33YG-i6-9iia3fKNp2kRYmhasKReoqf11VB3rzJeGy1kx_">
+                                </figure>
+                                <br><br>
+                                <p class="has-text-justified">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae dolor quaerat vel magnam! Nisi iure sapiente, fugiat animi, ipsam sed voluptate enim architecto eos repellat doloribus, reprehenderit eligendi sequi veniam omnis nulla provident atque vero cum! Tenetur perspiciatis similique placeat iste deserunt minima labore alias esse. Corrupti,
+                                </p>
+                                <br><br>
+                                <p class="has-text-justified">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae dolor quaerat vel magnam! Nisi iure sapiente, fugiat animi, ipsam sed voluptate enim architecto eos repellat doloribus, reprehenderit eligendi sequi veniam omnis nulla provident atque vero cum! Tenetur perspiciatis similique placeat iste deserunt minima labore alias esse. Corrupti,
+                                </p>
+                                {{-- <figure class="image">
+                                    <carousel-widget></carousel-widget>
+                                </figure> --}}
+                                </article>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="tile is-parent">
+                        <div class="card">
+                            <article class="tile is-child notification">
+                                <p class="title">Berita Anambas #3</p>
+                                {{-- <p class="subtitle">Post-3</p> --}}
+                                <div class="content">
+                                    <p class="has-text-justified">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia soluta molestias autem omnis necessitatibus rerum dolorum, ratione, fuga eos quaerat facere blanditiis quibusdam dicta vitae aliquam praesentium hic, saepe nemo. Quae ea minus beatae ratione rem, dignissimos, fuga labore inventore laborum ducimus repellat dicta voluptatum impedit tenetur aperiam tempore. Repellendus nemo beatae laudantium, possimus quos neque soluta ex dolorem quidem voluptatem distinctio debitis sequi aliquam reiciendis consequatur est harum impedit doloremque voluptas totam adipisci porro recusandae repudiandae officia. Suscipit tempora fugit quas commodi repudiandae? Vel libero dignissimos quo, nobis numquam magnam quae tempore beatae consectetur cumque voluptatum, illum amet molestiae.
+                                        <br><br>
+        
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia soluta molestias autem omnis necessitatibus rerum dolorum, ratione, fuga eos quaerat facere blanditiis quibusdam dicta vitae aliquam praesentium hic, saepe nemo. Quae ea minus beatae ratione rem, dignissimos, fuga labore inventore laborum ducimus repellat dicta voluptatum impedit tenetur aperiam tempore. Repellendus nemo beatae laudantium, possimus quos neque soluta ex dolorem quidem voluptatem distinctio debitis sequi aliquam reiciendis consequatur est harum impedit doloremque voluptas totam adipisci porro recusandae repudiandae officia. Suscipit tempora fugit quas commodi repudiandae? Vel libero dignissimos quo, nobis numquam magnam quae tempore beatae consectetur cumque voluptatum, illum amet molestiae.
+                                        <br><br>
+        
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia soluta molestias autem omnis necessitatibus rerum dolorum, ratione, fuga eos quaerat facere blanditiis quibusdam dicta vitae aliquam praesentium hic, saepe nemo. Quae ea minus beatae ratione rem, dignissimos, fuga labore inventore laborum ducimus repellat dicta voluptatum impedit tenetur aperiam tempore. Repellendus nemo beatae laudantium, possimus quos neque soluta ex dolorem quidem voluptatem distinctio debitis sequi aliquam reiciendis consequatur est harum impedit doloremque voluptas totam adipisci porro recusandae repudiandae officia. Suscipit tempora fugit quas commodi repudiandae? Vel libero dignissimos quo, nobis numquam magnam quae tempore beatae consectetur cumque voluptatum, illum amet molestiae.
+                                        <br><br>
+                                            
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia soluta molestias autem omnis necessitatibus rerum dolorum, ratione, fuga eos quaerat facere blanditiis quibusdam dicta vitae aliquam praesentium hic, saepe nemo. Quae ea minus beatae ratione rem, dignissimos, fuga labore inventore laborum ducimus repellat dicta voluptatum impedit tenetur aperiam tempore. Repellendus nemo beatae laudantium,
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        </div>
                     </div>
                     <div class="tile is-parent">
-                        <article class="tile is-child notification is-info">
-                        <p class="title">Galeri</p>
-                        <p class="subtitle">Foto Dokumentasi JDIH</p>
-                        <figure class="image is-4by3">
-                            <img src="https://bulma.io/images/placeholders/640x480.png">
-                        </figure>
-                        </article>
-                    </div>
-                    </div>
-                    <div class="tile is-parent">
-                    <article class="tile is-child notification is-danger">
-                        <p class="title">Berita Anambas #3</p>
-                        <p class="subtitle">Post-3</p>
-                        <div class="content">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatem ullam sunt quis labore nesciunt nam molestiae beatae architecto excepturi exercitationem dolores nihil placeat facilis, repudiandae nemo culpa laudantium harum!
+                        <div class="card">
+                            <article class="tile is-child notification">
+                            <div class="content" class="has-text-justified">
+                                <p class="title">Informasi Penting</p>
+                                <p class="subtitle">Informasi Penting untuk diketahui bersama</p>
+                                <div class="content">
+                                    <p class="has-text-justified">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente, illo aliquam, voluptates, architecto voluptate qui tempore temporibus accusamus quod reprehenderit magni. Sed et eligendi veritatis fugit alias quasi ipsa?
+                                    </p>
+                                    <br><br>
+                                    <p class="has-text-justified">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, tempora similique in eaque reprehenderit culpa quisquam consequuntur ducimus ipsam doloribus animi cupiditate non nihil ipsum dolorum dolore sed illo magnam accusamus nisi. Cumque totam voluptatibus tempora obcaecati eos ipsam ab aut pariatur voluptates harum expedita velit eligendi asperiores nostrum facilis repudiandae perferendis neque laudantium dolor sint, iusto deserunt fuga. Voluptate assumenda possimus modi voluptatem exercitationem dolores dolore, unde, delectus, animi reiciendis corrupti aut facere accusantium quae amet dicta. Distinctio dolores ipsa placeat deserunt vel maxime architecto sint quibusdam ducimus sed nostrum, ex dolor praesentium, eaque repellendus ratione excepturi quod debitis?
+                                    </p>
+                                    <br><br>
+                                    <p class="has-text-justified">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, tempora similique in eaque reprehenderit culpa quisquam consequuntur ducimus ipsam doloribus animi cupiditate non nihil ipsum dolorum dolore sed illo magnam accusamus nisi. Cumque totam voluptatibus tempora obcaecati eos ipsam ab aut pariatur voluptates harum expedita velit eligendi asperiores nostrum facilis repudiandae perferendis neque laudantium dolor sint, iusto deserunt fuga. Voluptate assumenda possimus modi voluptatem exercitationem dolores dolore, unde, delectus, animi reiciendis corrupti aut facere accusantium quae amet dicta. Distinctio dolores ipsa placeat deserunt vel maxime architecto sint quibusdam ducimus sed nostrum, ex dolor praesentium, eaque repellendus ratione excepturi quod debitis?
+                                    </p>
+                                    <br><br>
+                                    <figure class="image">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTuClNcXN3Os7D2vAFfbezDVJhucWSFEpACQGAlEocehHi_luUc">
+                                    </figure>
+                                    <br><br>
+                                    <p class="has-text-justified">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, tempora similique in eaque reprehenderit culpa quisquam consequuntur ducimus ipsam doloribus animi cupiditate non nihil ipsum dolorum dolore sed illo magnam accusamus nisi. Cumque totam voluptatibus tempora obcaecati eos ipsam ab aut pariatur voluptates harum expedita velit eligendi asperiores nostrum facilis repudiandae perferendis neque laudantium dolor sint, iusto deserunt fuga. Voluptate assumenda possimus modi voluptatem exercitationem dolores dolore, unde, delectus, animi reiciendis corrupti aut facere accusantium quae amet dicta. Distinctio dolores ipsa placeat deserunt vel maxime architecto sint quibusdam ducimus sed nostrum, ex dolor praesentium, eaque repellendus ratione excepturi quod debitis?
+                                    </p>
+                                </div>
+                            </div>
+                            </article>
                         </div>
-                    </article>
                     </div>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-success">
-                    <div class="content">
-                        <p class="title">Informasi Penting</p>
-                        <p class="subtitle">Informasi Penting untuk diketahui bersama</p>
-                        <div class="content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente, illo aliquam, voluptates, architecto voluptate qui tempore temporibus accusamus quod reprehenderit magni. Sed et eligendi veritatis fugit alias quasi ipsa?
-                        </div>
-                    </div>
-                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     
 @endsection
+
+<script>
+    export default {
+        data(){
+            return {
+                
+            }
+        }
+    }
+</script>

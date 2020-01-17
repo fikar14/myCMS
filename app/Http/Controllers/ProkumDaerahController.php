@@ -73,7 +73,7 @@ class ProkumDaerahController extends Controller
                 //Filename to store
                 $lampiranNameToStore = $filename.'_'.time().'.'.$extension;                       
                 // Upload Image
-                $path = $request->file('lampiran')->storeAs('public/prokumda/lampiran', $fileNameToStore);
+                $path = $request->file('lampiran')->storeAs('public/lampiran', $fileNameToStore);
             } else {
                 $lampiranNameToStore = 'nofile';
             }
@@ -85,6 +85,7 @@ class ProkumDaerahController extends Controller
                 'judul' => $request->judul,
                 'katalog' => $request->katalog,
                 'abstrak' => $request->abstrak,
+                'status' => $request->status,
                 'file' => $fileNameToStore,
                 'lampiran' => $lampiranNameToStore,
             ]);
@@ -137,10 +138,28 @@ class ProkumDaerahController extends Controller
         //
     }
 
-    public function prokumda()
+    public function prokumda(Request $request)
     {
-        
-        return view('produk-hukum-daerah.prokumda');
+        // menangkap data pencarian
+		$search = $request->search;
+		$search2 = $request->search2;
+		$search3 = $request->search3;
+		$search4 = $request->search4;
+ 
+        // mengambil data dari table prokumda sesuai pencarian data
+        if($search || $search2 || $search3 || $search4){
+            $prokumda = ProkumDaerah::where([
+                ['bentuk','like',"%".$search."%"],
+                ['no_per','like',"%".$search2."%"],
+                ['tahun','like',"%".$search3."%"],
+                ['judul','like',"%".$search4."%"],
+            ])
+            ->paginate(10);
+            }else{
+            $prokumda = ProkumDaerah::latest()->paginate(10);
+        }
+
+        return view('produk-hukum-daerah.prokumda', ['prokumda' => $prokumda]);
     }
 
     public function search(Request $request)

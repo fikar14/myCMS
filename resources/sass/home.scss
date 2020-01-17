@@ -1,5 +1,32 @@
 body .hero {
     background: url("http://localhost:8000/images/batik.jpg");
+    margin-left: 0px;
+    z-index: 1;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.35);
+  }
+
+  body .pencarian {
+    background: url("https://www.resaleai.com/bg-2.svg");
+    background-position: center center;
+    background-color: #dadada8c;
+    // margin-top: -100px;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 900px;
+    width: 100%;
+    z-index: -1000;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.35);
+  }
+
+  .profile-visi {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #0a2b4e;
+    margin-top: -100px;
+    // color: whitesmoke;
+  }
+
+  .profile-text {
+    font-family: 'Roboto Condensed', sans-serif;
   }
 //   body .hero:before {
 //     content: '';
@@ -19,16 +46,22 @@ body .hero {
   }
 
   body h3 {
-    margin-bottom: o;
+    margin-bottom: 0;
   }
 
   body .content {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     min-height: 60vh;
     flex-direction: column;
   }
 
+  .card {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
   .card-top {
+    font-family: 'Roboto Condensed', sans-serif;
     z-index: 1;
     margin-top: 100px;
     box-shadow: 0 2px 2px 2px rgba(0,0,0,0.35);
@@ -47,6 +80,7 @@ body .hero {
   }
 
   .judul-page {
+    font-family: 'Roboto Condensed', sans-serif;
     min-height: 9vh;
   }
 

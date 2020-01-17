@@ -34,7 +34,7 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="/profile">
                         Visi
                     </a>
                     <a class="navbar-item">
@@ -82,7 +82,7 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="/produk-hukum-desa">
                         Peraturan Desa
                     </a>
                     <a class="navbar-item">

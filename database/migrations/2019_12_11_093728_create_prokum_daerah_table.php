@@ -23,7 +23,7 @@ class CreateProkumDaerahTable extends Migration
             $table->string('abstrak');
             $table->string('file');
             $table->string('lampiran');
-            $table->enum('status', ['Dicabut', 'Mencabut', 'Diubah', 'Mengubah']);
+            $table->string('status')->nullable();
             $table->bigInteger('downloaded')->default(0)->unsigned();
             $table->timestamps();
         });

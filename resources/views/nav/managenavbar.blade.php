@@ -6,7 +6,7 @@
             </p>
             <ul class="menu-list">
               <li>
-                  <a href="#"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+                  <a href="/home"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
               </li>
             </ul>
             <p class="menu-label">
@@ -14,7 +14,7 @@
             </p>
             <ul class="menu-list">
               <li>
-                <a href="#"><i class="fas fa-sticky-note"></i>
+                <a><i class="fas fa-sticky-note"></i>
                    <span>Page</span></a>
               </li>
               <li>
@@ -29,12 +29,6 @@
                   </li>
                 </ul>
               </li> 
-              <li>
-                <a href="/produk-hukum-daerah"><i class="fas fa-gavel"></i> <span>Produk Hukum Daerah</span></a>
-              </li>             
-              <li>
-                <a href="/produkhukum"><i class="fas fa-gavel"></i> <span>Produk Hukum Desa</span></a>
-              </li>
             </ul>
             <p class="menu-label">
               Administration
@@ -60,9 +54,16 @@
               <li><a href="/manage/profile"> <i class="fas fa-newspaper"></i>
                 <span>Profile</span></a>
               </li>
-              <li><a href="/manage/contact"><i class="fa fa-id-card-alt"></i>
-                <span>Contact</span></a>
-              </li>
+              <ul class="menu-list">
+                <li>
+                    <a href="/produk-hukum-daerah"><i class="fa fa-id-card-alt"></i> <span>Produk Hukum</span></a>
+                </li>
+              </ul>
+              <ul class="menu-list">
+                <li>
+                    <a href="/produkhukum"><i class="fa fa-id-card-alt"></i> <span>Produk Hukum Desa</span></a>
+                </li>
+              </ul>
               <li><a> <i class="fa fa-sign-out-alt"></i>
                 <span>Logout</span></a>
               </li>

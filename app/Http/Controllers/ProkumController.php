@@ -12,10 +12,10 @@ class ProkumController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Display a listing of the resource.
@@ -69,9 +69,9 @@ class ProkumController extends Controller
     public function store(Request $request)
     {
         \Validator::make($request->all(),[
-            "nomor" => "required|min:2|max:100",
+            "nomor" => "required|min:1|max:100",
             "tahun" => "required|min:4|max:100",
-            "desa" => "required|min:4|max:100",
+            "desa" => "required|min:2|max:100",
             "judul" => "required|min:4|max:250",
             ])->validate();
 
@@ -146,8 +146,28 @@ class ProkumController extends Controller
         //
     }
 
-    public function prokumde()
+    public function prokumde(Request $request)
     {
-        return view('produkhukum.prokumdesa');
+        $prokum = Prokum::latest()->paginate(10);
+
+        // menangkap data pencarian
+		$search = $request->search;
+		$search2 = $request->search2;
+		$search3 = $request->search3;
+		$search4 = $request->search4;
+ 
+        // mengambil data dari table prokum sesuai pencarian data
+        if($search || $search2 || $search3 || $search4){
+            $prokum = Prokum::where([
+                ['nomor','like',"%".$search."%"],
+                ['tahun','like',"%".$search2."%"],
+                ['desa','like',"%".$search3."%"],
+                ['judul','like',"%".$search4."%"],
+            ])->paginate(10);
+        }
+        else{
+            $prokum = Prokum::latest()->paginate(10);
+        }
+        return view('produkhukum.prokumdesa', ['prokum'=>$prokum]);
     }
 }

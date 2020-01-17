@@ -1,21 +1,20 @@
-
 // Fonts
 // @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bulma
-@import 'node_modules/bulma/bulma';
+@import "node_modules/bulma/bulma";
 
 //Bulma Vue Modules
-@import 'node_modules/buefy/src/scss/buefy.scss';
+@import "node_modules/buefy/src/scss/buefy.scss";
 
 //Custum SASS
-@import 'styles';
-@import 'helpers';
-@import 'overrides';
-@import 'adminmenu';
-@import 'managemenu';
-@import 'home';
-@import 'blog';
+@import "styles";
+@import "helpers";
+@import "overrides";
+@import "adminmenu";
+@import "managemenu";
+@import "home";
+@import "blog";

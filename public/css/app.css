@@ -16870,6 +16870,38 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   padding-right: 150px !important;
 }
 
+.m-t-200 {
+  margin-top: 200px !important;
+}
+
+.p-t-200 {
+  padding-top: 200px !important;
+}
+
+.m-b-200 {
+  margin-bottom: 200px !important;
+}
+
+.p-b-200 {
+  padding-bottom: 200px !important;
+}
+
+.m-l-200 {
+  margin-left: 200px !important;
+}
+
+.p-l-200 {
+  padding-left: 200px !important;
+}
+
+.m-r-200 {
+  margin-right: 200px !important;
+}
+
+.p-r-200 {
+  padding-right: 200px !important;
+}
+
 .navbar {
   z-index: 0;
 }
@@ -16984,6 +17016,31 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 body .hero {
   background: url("http://localhost:8000/images/batik.jpg");
+  margin-left: 0px;
+  z-index: 1;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+body .pencarian {
+  background: url("https://www.resaleai.com/bg-2.svg");
+  background-position: center center;
+  background-color: #dadada8c;
+  margin-top: 0px;
+  margin-left: 0px;
+  height: 900px;
+  width: 100%;
+  z-index: -1000;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.profile-visi {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #0a2b4e;
+  margin-top: -100px;
+}
+
+.profile-text {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body .hero h1 {
@@ -16995,10 +17052,11 @@ body .hero h1 {
 }
 
 body h3 {
-  margin-bottom: o;
+  margin-bottom: 0;
 }
 
 body .content {
+  font-family: "Roboto Condensed", sans-serif;
   display: -webkit-box;
   display: flex;
   min-height: 60vh;
@@ -17007,7 +17065,12 @@ body .content {
           flex-direction: column;
 }
 
+.card {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 .card-top {
+  font-family: "Roboto Condensed", sans-serif;
   z-index: 1;
   margin-top: 100px;
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
@@ -17026,6 +17089,7 @@ body .content {
 }
 
 .judul-page {
+  font-family: "Roboto Condensed", sans-serif;
   min-height: 9vh;
 }
 

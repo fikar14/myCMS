@@ -62,10 +62,11 @@
                         placeholder="Filter by Judul"/>
                 </div>
                 <div class="column is-1">
-                    <input
-                        type="submit"
-                        value="Filter"
-                        class="button is-link is-fullwidth">
+                    <button class="button is-link">
+                        <span class="icon is-small">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
                 </div>
             </div>
         </form>
@@ -73,7 +74,7 @@
         <div class="columns">
             <div class="column">
                 <div class="card-content">
-                    <table class="table is-narrow is-fullwidth">
+                    <table class="table is-striped is-fullwidth">
                         <thead>
                             <tr>
                                 <th>Nomor</th>
@@ -95,7 +96,7 @@
                                 <td>{{date('d F Y', strtotime($hukum->created_at))}}</td>
                                 <td>
                                     @if($hukum->fileupload)
-                                        <a href="{{ asset('storage/prokum/'.$hukum->fileupload) }}" target="_blank">{{ $hukum->fileupload }}</a></td>
+                                        <a href="{{ asset('/storage/prokum/'.$hukum->fileupload) }}" target="_blank"><i class="fas fa-download"></a></td>
                                     @else
                                         File Kosong 
                                     @endif
@@ -116,6 +117,7 @@
                 </div>
             </div>
         </div>
+        {{$prokum->links()}}
     </div>
 </div>
 

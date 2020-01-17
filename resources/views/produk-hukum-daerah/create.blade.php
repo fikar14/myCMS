@@ -70,6 +70,7 @@
                             <div class="control ">
                                 <div class="select is-fullwidth" name="status" id="status">
                                     <select>
+                                        <option value=" ">-</option>
                                         <option value="Dicabut">Dicabut</option>
                                         <option value="Mencabut">Mencabut</option>
                                         <option value="Diubah">Diubah</option>
