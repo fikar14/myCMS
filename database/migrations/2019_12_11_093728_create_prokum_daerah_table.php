@@ -23,7 +23,7 @@ class CreateProkumDaerahTable extends Migration
             $table->string('abstrak');
             $table->string('file');
             $table->string('lampiran');
-            $table->string('status')->nullable();
+            $table->string('status');
             $table->bigInteger('downloaded')->default(0)->unsigned();
             $table->timestamps();
         });

@@ -68,9 +68,9 @@
                         <div class="field">
                             <label for="">Status</label>
                             <div class="control ">
-                                <div class="select is-fullwidth" name="status" id="status">
-                                    <select>
-                                        <option value=" ">-</option>
+                                <div class="select is-fullwidth">
+                                    <select name="status">
+                                        <option value="Baru">Baru</option>
                                         <option value="Dicabut">Dicabut</option>
                                         <option value="Mencabut">Mencabut</option>
                                         <option value="Diubah">Diubah</option>
@@ -172,7 +172,8 @@
     var app= new Vue({
         el:'#app',
         data: {
-            file: ''
+            file: '',
+            status: ''
         }
     });
 </script>

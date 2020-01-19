@@ -1,33 +1,33 @@
 body .hero {
     background: url("http://localhost:8000/images/batik.jpg");
-    margin-left: 0px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
     z-index: 1;
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.35);
-  }
+}
 
-  body .pencarian {
+.hero-body {
+    margin-top: 75px;
+    @include fullhd {
+        margin-top: 200px;
+    }
+}
+
+body .pencarian {
     background: url("https://www.resaleai.com/bg-2.svg");
     background-position: center center;
-    background-color: #dadada8c;
+    background-color: whitesmoke;
     // margin-top: -100px;
     margin-top: 0px;
     margin-left: 0px;
-    height: 900px;
+    height: 100vh;
     width: 100%;
-    z-index: -1000;
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.35);
-  }
+    z-index: -1;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
 
-  .profile-visi {
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: #0a2b4e;
-    margin-top: -100px;
-    // color: whitesmoke;
-  }
-
-  .profile-text {
-    font-family: 'Roboto Condensed', sans-serif;
-  }
 //   body .hero:before {
 //     content: '';
 //     height: 100%;
@@ -37,82 +37,92 @@ body .hero {
 //     background: rgba(44, 123, 183, 0.5);
 //     position: absolute;
 //   }
-  body .hero h1 {
-    font-family: 'Roboto Condensed', sans-serif;
+body .hero h1 {
+    font-family: "Roboto Condensed", sans-serif;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3rem;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
-  }
+    @include fullhd {
+        font-family: "Roboto Condensed", sans-serif;
+        color: white;
+        font-size: 3rem;
+        line-height: 3rem;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+    }
+}
 
-  body h3 {
+body h3 {
     margin-bottom: 0;
-  }
+}
 
-  body .content {
-    font-family: 'Roboto Condensed', sans-serif;
+body .content {
+    font-family: "Roboto Condensed", sans-serif;
     display: flex;
     min-height: 60vh;
     flex-direction: column;
-  }
+}
 
-  .card {
-    font-family: 'Roboto Condensed', sans-serif;
-  }
+.card {
+    font-family: "Roboto Condensed", sans-serif;
+}
 
-  .card-top {
-    font-family: 'Roboto Condensed', sans-serif;
-    z-index: 1;
+.card-top {
+    font-family: "Roboto Condensed", sans-serif;
     margin-top: 100px;
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.35);
-  }
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+    @include fullhd {
+        font-family: "Roboto Condensed", sans-serif;
+        margin-top: 300px;
+        box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+    }
+}
 
-  .card-page-prokum {
+.card-page-prokum {
     min-height: 30vh !important;
-  }
+}
 
-  .hr {
-    border:none;
+.hr {
+    border: none;
     height: 0;
     width: 90%;
     margin-top: 0;
     border-bottom: 1px solid #1f1209;
-  }
+}
 
-  .judul-page {
-    font-family: 'Roboto Condensed', sans-serif;
+.judul-page {
+    font-family: "Roboto Condensed", sans-serif;
     min-height: 9vh;
-  }
+}
 
-  .has-text-centered {
+.has-text-centered {
     .card-header,
     .card-img,
     .card-content {
-      justify-content: center;
-      align-items: center;
+        justify-content: center;
+        align-items: center;
     }
-  }
-  
-  // .has-text-centered {
-  //   .card-content p{
-  //     margin-top: -20px;
-  //   }
-  // }
+}
 
-  
+// .has-text-centered {
+//   .card-content p{
+//     margin-top: -20px;
+//   }
+// }
+
 //   .ct_icon_box {
 //     margin-bottom: 50px;
 //   }
-  
+
 //   .ct_icon_box_section {
 //     margin-bottom: 60px;
 //   }
-  
+
 //   .ct-section_header {
 //     text-align: center;
 //     padding-top: 80px;
 //   }
-  
+
 //   .ct-section_header h2 {
 //     font-size: 65px;
 //     font-size: 6.5rem;
@@ -121,7 +131,7 @@ body .hero {
 //     font-weight: bold;
 //     margin-bottom: 0;
 //   }
-  
+
 //   .ct-section_header.ct-section_header--type2 h2 {
 //     font-size: 50px;
 //     font-size: 5rem;
@@ -129,7 +139,7 @@ body .hero {
 //     padding-bottom: 1.7rem;
 //     font-family: 'Roboto Condensed', sans-serif;
 //   }
-  
+
 //   .ct-section_header.ct-section_header--type2 .ct-section_header-description {
 //     font-size: 18px;
 //     font-size: 1.8rem;
@@ -140,20 +150,20 @@ body .hero {
 //     font-family: 'Roboto Condensed', sans-serif;
 //     text-align: center;
 //   }
-  
+
 //   .ct-section_header.ct-section_header--type2 .ct-section_header-separator {
 //     background-color: #0BB3E1;
 //   }
-  
-  .ct-section_header-separator {
+
+.ct-section_header-separator {
     background-color: #2179fd;
     // height: 2px;
     height: 0.2rem;
     display: inline-block;
     // width: 171px;
     width: 25rem;
-  }
-  
+}
+
 //   .ct-icon_box {
 //     margin-bottom: 3rem;
 //   }

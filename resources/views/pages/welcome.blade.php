@@ -32,9 +32,9 @@
             </div>           
         </div>
     </section>
-
+    
     <section class="columns is-multiline pencarian is-centered">
-        <div class="column is-6 is-narrow m-t-150">
+        <div class="column is-6 is-narrow">
             <div class="card card-top">
                 {{-- <img class="img-card m-t-20" src="{{ asset('images/Garuda-100x100.png') }}"> --}}
                 <header class="card-header">
@@ -284,11 +284,8 @@
 @endsection
 
 <script>
-    export default {
-        data(){
-            return {
-                
-            }
-        }
-    }
+    bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 4
+    });
 </script>

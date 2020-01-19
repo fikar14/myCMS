@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Alata|Anton|Fredoka+One|Lobster+Two|Noto+Sans+JP|Playball|Righteous|Yanone+Kaffeesatz&display=swap);@charset "UTF-8";
 
 /*! bulma.io v0.7.5 | MIT License | github.com/jgthms/bulma */
 
@@ -17016,39 +17016,52 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 body .hero {
   background: url("http://localhost:8000/images/batik.jpg");
-  margin-left: 0px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
   z-index: 1;
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.hero-body {
+  margin-top: 75px;
+}
+
+@media screen and (min-width: 1408px) {
+  .hero-body {
+    margin-top: 200px;
+  }
 }
 
 body .pencarian {
   background: url("https://www.resaleai.com/bg-2.svg");
   background-position: center center;
-  background-color: #dadada8c;
+  background-color: whitesmoke;
   margin-top: 0px;
   margin-left: 0px;
-  height: 900px;
+  height: 100vh;
   width: 100%;
-  z-index: -1000;
+  z-index: -1;
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
-}
-
-.profile-visi {
-  font-family: "Roboto Condensed", sans-serif;
-  background-color: #0a2b4e;
-  margin-top: -100px;
-}
-
-.profile-text {
-  font-family: "Roboto Condensed", sans-serif;
 }
 
 body .hero h1 {
   font-family: "Roboto Condensed", sans-serif;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 3rem;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (min-width: 1408px) {
+  body .hero h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: white;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+  }
 }
 
 body h3 {
@@ -17071,9 +17084,16 @@ body .content {
 
 .card-top {
   font-family: "Roboto Condensed", sans-serif;
-  z-index: 1;
   margin-top: 100px;
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (min-width: 1408px) {
+  .card-top {
+    font-family: "Roboto Condensed", sans-serif;
+    margin-top: 300px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .card-page-prokum {
@@ -17111,5 +17131,322 @@ body .content {
 
 .ck-editor__editable_inline {
   min-height: 800px;
+}
+
+body .profile {
+  background: url("http://localhost:8000/images/law2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -50px;
+  z-index: -10;
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+@media screen and (min-width: 1408px) {
+  body .profile {
+    margin-top: -200px;
+  }
+}
+
+.top-judul {
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 1408px) {
+  .top-judul {
+    margin-top: 300px;
+  }
+}
+
+.title-judul {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-shadow: 0 0 3px #000000;
+  font-family: "Fredoka One", cursive;
+}
+
+@media screen and (min-width: 1408px) {
+  .title-judul {
+    margin-top: 20px;
+    font-size: 3rem;
+    text-shadow: 0 0 3px #000000;
+    font-family: "Fredoka One", cursive;
+  }
+}
+
+.subtitle-judul {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  text-shadow: 0 0 6px #ffffff;
+}
+
+@media screen and (min-width: 1408px) {
+  .subtitle-judul {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2rem;
+    color: black;
+    text-shadow: 0 0 6px #ffffff;
+  }
+}
+
+body .profile h1 {
+  color: whitesmoke;
+}
+
+.profile-visi {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #0a2b4e;
+  color: whitesmoke;
+  font-size: 1rem;
+  margin-top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1408px) {
+  .profile-visi {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #0a2b4e;
+    color: whitesmoke;
+    margin-top: 0;
+    font-size: 1.5rem;
+    height: 100vh;
+    z-index: -1;
+  }
+}
+
+.title-visi {
+  font-family: "Righteous", cursive;
+  font-size: 3rem;
+  margin-top: 50px;
+  color: whitesmoke;
+}
+
+@media screen and (min-width: 1408px) {
+  .title-visi {
+    font-family: "Righteous", cursive;
+    font-size: 4rem;
+    margin-top: 100px;
+    color: whitesmoke;
+  }
+}
+
+.profile-misi {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #0a2b4e;
+  font-size: 1rem;
+  margin-top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1408px) {
+  .profile-misi {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #0a2b4e;
+    font-size: 1.5rem;
+    margin-top: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+}
+
+.title-misi {
+  font-family: "Righteous", cursive;
+  font-size: 3rem;
+  margin-top: 50px;
+  color: #0a2b4e;
+}
+
+@media screen and (min-width: 1408px) {
+  .title-misi {
+    font-family: "Righteous", cursive;
+    font-size: 4rem;
+    margin-top: 100px;
+    color: #0a2b4e;
+  }
+}
+
+.tugas-pokok {
+  background: url("http://localhost:8000/images/law.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 12px;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.title-tupoksi {
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  margin-top: 35px;
+  text-shadow: 0 0 6px #000000;
+}
+
+@media screen and (min-width: 1408px) {
+  .title-tupoksi {
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-size: 3rem;
+    margin-top: 75px;
+    text-shadow: 0 0 6px #000000;
+  }
+}
+
+.tupoksi {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.list-tupoksi {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin: 5px 10px 10px 15px;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1408px) {
+  .list-tupoksi {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    margin: 25px 25px 25px 25px;
+    font-size: 1.8rem;
+  }
+}
+
+.tujuan {
+  background-color: whitesmoke;
+  height: 70vh;
+  margin-top: 10px;
+  z-index: -1;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.title-tujuan {
+  font-family: "Lobster Two", cursive;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1408px) {
+  .title-tujuan {
+    font-family: "Lobster Two", cursive;
+    font-size: 3rem;
+    margin-top: 100px;
+  }
+}
+
+.tujuan p {
+  font-family: "Playball", cursive;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1408px) {
+  .tujuan p {
+    font-family: "Playball", cursive;
+    font-size: 2rem;
+  }
+}
+
+.tujuan img {
+  text-shadow: 0 0 3px #000000;
+  margin-top: -25px;
+  height: 460px;
+  width: 460px;
+}
+
+@media screen and (min-width: 1408px) {
+  .tujuan img {
+    text-shadow: 0 0 3px #000000;
+    margin-top: -50px;
+    height: 720px;
+    width: 720px;
+  }
+}
+
+.fungsi {
+  background-color: #fccf53;
+  height: 70vh;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.fungsi img {
+  height: 160px;
+  width: 160px;
+  margin-left: 125px;
+}
+
+@media screen and (min-width: 1408px) {
+  .fungsi img {
+    height: 320px;
+    width: 320px;
+    margin-left: 250px;
+  }
+}
+
+.fungsi p {
+  font-family: "Playball", cursive;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  text-shadow: 0 0 3px #000000;
+}
+
+@media screen and (min-width: 1408px) {
+  .fungsi p {
+    font-family: "Playball", cursive;
+    font-size: 2rem;
+    color: whitesmoke;
+    text-shadow: 0 0 3px #000000;
+  }
+}
+
+.title-fungsi {
+  font-family: "Lobster Two", cursive;
+  font-size: 2rem;
+  color: whitesmoke;
+  margin-top: 50px;
+  text-shadow: 0 0 3px #000000;
+}
+
+@media screen and (min-width: 1408px) {
+  .title-fungsi {
+    font-family: "Lobster Two", cursive;
+    font-size: 3rem;
+    color: whitesmoke;
+    margin-top: 100px;
+    text-shadow: 0 0 3px #000000;
+  }
+}
+
+.title-organisasi {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  color: #3e84ec;
+  text-shadow: 0 0 2px #000000;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #008cff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #101885;
 }
 
