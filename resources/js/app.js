@@ -12,6 +12,7 @@ window.Slug = require("slug");
 Slug.defaults.mode = "rfc3986";
 
 import Buefy from "buefy";
+// import 'buefy/dist/buefy.css';
 Vue.use(Buefy);
 
 import CKEditor from "@ckeditor/ckeditor5-vue";
@@ -35,6 +36,10 @@ Vue.component(
 Vue.component(
     "prokum-desa",
     require("./components/frontpages/Prokumde.vue").default
+);
+Vue.component(
+    "profile-component",
+    require("./components/ProfileComponent.vue").default
 );
 
 /**

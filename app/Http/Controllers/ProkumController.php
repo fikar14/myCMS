@@ -120,7 +120,8 @@ class ProkumController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prokum = Prokum::findOrFail($id);
+        return view('produkhukum.edit', compact('prokum'));
     }
 
     /**
@@ -132,7 +133,37 @@ class ProkumController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        \Validator::make($request->all(),[
+            "nomor" => "required|min:1|max:100",
+            "tahun" => "required|min:4|max:100",
+            "desa" => "required|min:2|max:100",
+            "judul" => "required|min:4|max:250",
+            ])->validate();
+
+            if($request->hasFile('fileupload')) {
+                // Get filename with extension            
+                $filenameWithExt = $request->file('fileupload')->getClientOriginalName();
+                // Get just filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);            
+                // Get just ext
+                $extension = $request->file('fileupload')->getClientOriginalExtension();
+                //Filename to store
+                $fileNameToStore = $filename.'_'.time().'.'.$extension;                       
+                // Upload Image
+                $path = $request->file('fileupload')->storeAs('public/prokum', $fileNameToStore);
+            } else {
+                $fileNameToStore = 'nofile';
+            }
+
+            $prokum = Prokum::findOrFail($id);
+            $prokum->nomor = $request->nomor;
+            $prokum->tahun = $request->tahun;
+            $prokum->desa = $request->desa;
+            $prokum->judul = $request->judul;
+            $prokum->fileupload = $fileNameToStore;
+            $prokum->save();
+
+            return redirect()->route('produkhukum.index')->with(['success' => 'Update Produk Hukum Berhasil!']);
     }
 
     /**
@@ -143,7 +174,11 @@ class ProkumController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $prokum = Prokum::findOrFail($id);
+        $prokum->delete();
+
+        return redirect()->route('produkhukum.index')->with('status', 'Produk Hukum
+       Berhasil di delete');
     }
 
     public function prokumde(Request $request)

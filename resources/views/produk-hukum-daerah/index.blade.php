@@ -19,6 +19,28 @@
                 {{session('status')}}
             </div>
         @endif
+
+        {{-- Modal --}}
+        {{-- <div class="modal" v-bind:class="{'is-active':isActive}">
+            <div class="modal-background"></div>
+            <form action="#" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="modal-card" style="width: 640">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Update Produk Hukum</p>
+                    </header>
+                    <section class="modal-card-body">
+                        <label for="">Update</label>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button" type="button" @click="close">Close</button>
+                        <button class="button is-primary">Create</button>
+                    </footer>
+                </div>
+            </form>
+        </div>  --}}
+        {{-- End of Modal --}}
             
         <form action="{{route('search')}}">
         <div class="columns">
@@ -113,10 +135,20 @@
                                 <td>
                                     <div class="columns">
                                         <div class="column is-1 m-r-15">
-                                            <a class="button is-success is-small" href="#"><i class="fas fa-eye"></i></a>
+                                            <a 
+                                                class="button is-success is-small" 
+                                                href="{{route('produk-hukum-daerah.edit', $prokum->id)}}">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
                                         </div>
                                         <div class="column is-1">
-                                            <a class="button is-danger is-small" href="#"><i class="far fa-trash-alt"></i></a>
+                                            <form
+                                                action="{{route('produk-hukum-daerah.destroy', $prokum->id)}}"
+                                                method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="button is-danger is-small"><i class="far fa-trash-alt"></i></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </td>
@@ -138,7 +170,11 @@
     var app= new Vue({
         el:'#app',
         data: {
-            file: ''
+            file: '',
+            isActive: false
+        },
+        methods: {
+            
         }
     });
 </script>

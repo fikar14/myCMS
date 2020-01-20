@@ -38,15 +38,15 @@ class ProkumDaerahController extends Controller
      */
     public function store(Request $request)
     {
-        // \Validator::make($request->all(),[
-        //     "bentuk" => "required|min:4|max:100",
-        //     "no_per" => "required|min:2|max:100",
-        //     "tahun" => "required|min:4|max:100",
-        //     "judul" => "required|min:4|max:100",
-        //     "katalog" => "required|min:1|max:100",
-        //     "abstrak" => "required|min:1|max:100",
-        //     "status" => "required|min:4|max:100",
-        //     ])->validate();
+        \Validator::make($request->all(),[
+            "bentuk" => "required|min:4|max:100",
+            "no_per" => "required|min:2|max:100",
+            "tahun" => "required|min:4|max:100",
+            "judul" => "required|min:4|max:100",
+            "katalog" => "required|min:1|max:255",
+            "abstrak" => "required|min:1|max:255",
+            "status" => "required|min:4|max:100",
+            ])->validate();
 
             if($request->hasFile('file')) {
                 // Get filename with extension            
@@ -112,7 +112,8 @@ class ProkumDaerahController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prokumda = ProkumDaerah::findOrFail($id);
+        return view('produk-hukum-daerah.edit', compact('prokumda'));
     }
 
     /**
@@ -124,7 +125,58 @@ class ProkumDaerahController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        \Validator::make($request->all(),[
+            "bentuk" => "required|min:4|max:100",
+            "no_per" => "required|min:2|max:100",
+            "tahun" => "required|min:4|max:100",
+            "judul" => "required|min:4|max:100",
+            "katalog" => "required|min:1|max:255",
+            "abstrak" => "required|min:1|max:255",
+            "status" => "required|min:4|max:100",
+            ])->validate();
+                
+            if($request->hasFile('file')) {
+                // Get filename with extension            
+                $filenameWithExt = $request->file('file')->getClientOriginalName();
+                // Get just filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);            
+                // Get just ext
+                $extension = $request->file('file')->getClientOriginalExtension();
+                //Filename to store
+                $fileNameToStore = $filename.'_'.time().'.'.$extension;                       
+                // Upload Image
+                $path = $request->file('file')->storeAs('public/prokumda', $fileNameToStore);
+            } else {
+                $fileNameToStore = 'nofile';
+            }
+
+            if($request->hasFile('lampiran')) {
+                // Get filename with extension            
+                $filenameWithExt = $request->file('lampiran')->getClientOriginalName();
+                // Get just filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);            
+                // Get just ext
+                $extension = $request->file('lampiran')->getClientOriginalExtension();
+                //Filename to store
+                $lampiranNameToStore = $filename.'_'.time().'.'.$extension;                       
+                // Upload Image
+                $path = $request->file('lampiran')->storeAs('public/lampiran', $fileNameToStore);
+            } else {
+                $lampiranNameToStore = 'nofile';
+            }
+            $prokumda = ProkumDaerah::findOrFail($id);
+            $prokumda->bentuk = $request->bentuk;
+            $prokumda->no_per = $request->no_per;
+            $prokumda->tahun = $request->tahun;
+            $prokumda->judul = $request->judul;
+            $prokumda->katalog = $request->katalog;
+            $prokumda->abstrak = $request->abstrak;
+            $prokumda->status = $request->status;
+            $prokumda->file = $fileNameToStore;
+            $prokumda->lampiran = $lampiranNameToStore;
+            $prokumda->save();
+
+            return redirect()->route('produk-hukum-daerah.index')->with(['success' => 'Update Produk Hukum Berhasil!']);
     }
 
     /**
@@ -135,7 +187,11 @@ class ProkumDaerahController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $prokumda = ProkumDaerah::findOrFail($id);
+        $prokumda->delete();
+
+        return redirect()->route('produk-hukum-daerah.index')->with('status', 'Produk Hukum
+       Berhasil di delete');
     }
 
     public function prokumda(Request $request)

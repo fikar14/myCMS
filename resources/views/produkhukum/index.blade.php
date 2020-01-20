@@ -103,10 +103,17 @@
                                 <td>
                                     <div class="columns">
                                         <div class="column is-1 m-r-15">
-                                            <a class="button is-success is-small" href="#"><i class="fas fa-eye"></i></a>
+                                            <a class="button is-success is-small" href="{{route('produkhukum.edit', $hukum->id)}}">
+                                                <i class="fas fa-eye"></i></a>
                                         </div>
                                         <div class="column is-1">
-                                            <a class="button is-danger is-small" href="#"><i class="far fa-trash-alt"></i></a>
+                                            <form
+                                                action="{{route('produkhukum.destroy', $hukum->id)}}"
+                                                method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="button is-danger is-small"><i class="far fa-trash-alt"></i></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </td>
