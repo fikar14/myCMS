@@ -13,22 +13,7 @@
                 </h1>
                 <h2 class="subtitle">
                     Pemerintah Kabupaten Kepulauan Anambas
-                </h2>
-                
-                {{-- <div class="columns is-centered m-t-20">
-                    <div class="column is-3 ">
-                        <div class="field has-addons">
-                            <div class="control">
-                                <input class="input is-large" type="text" placeholder="Cari Produk Hukum">
-                            </div>
-                            <div class="control">
-                                <a class="button is-link is-large">
-                                Cari
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+                </h2>                
             </div>           
         </div>
     </section>
@@ -36,133 +21,106 @@
     <section class="columns is-multiline pencarian is-centered">
         <div class="column is-6 is-narrow">
             <div class="card card-top">
-                {{-- <img class="img-card m-t-20" src="{{ asset('images/Garuda-100x100.png') }}"> --}}
                 <header class="card-header">
                     <p class="card-header-title">
                         PENCARIAN KEBIJAKAN
                     </p>
                 </header>
-                <div class="card-content">
-                    <div class="columns">
-                        <div class="column is-10 is-offset-1">
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Jenis Kebijakan</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <div class="select is-link is-fullwidth">
-                                                <select>
-                                                    <option>Semua Kebijakan</option>
-                                                    <option>PERATURAN PRESIDEN</option>
-                                                    <option>PERATURAN GUBERNUR</option>
-                                                    <option>PERATURAN BUPATI</option>
-                                                </select>
+                <form action="{{route('prokumda')}}">
+                    <div class="card-content">
+                        <div class="columns">
+                            <div class="column is-10 is-offset-1">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Bentuk</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input
+                                                    value="{{ old('search') }}"
+                                                    name="search"
+                                                    class="input"
+                                                    type="text"
+                                                    placeholder="Filter by Bentuk"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Tahun</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control ">
-                                            <div class="select is-link is-fullwidth">
-                                                <select>
-                                                    <option>Semua</option>
-                                                    <option>2020</option>
-                                                    <option>2019</option>
-                                                    <option>2018</option>
-                                                </select>
+    
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Nomor Peraturan</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input
+                                                    value="{{ old('search2') }}"
+                                                    name="search2"
+                                                    class="input"
+                                                    type="text"
+                                                    placeholder="Filter by Nomor Peraturan"/>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Nomor</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input is-link" type="text" placeholder="Find a repository">
+                                </div>   
+    
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Tahun</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control ">
+                                                <div class="select is-link is-fullwidth">
+                                                    <select name="search3" value="{{ old('search3') }}">
+                                                        <option value="">Pilih Tahun</option>
+                                                        <option>2020</option>
+                                                        <option>2019</option>
+                                                        <option>2018</option>
+                                                        <option>2017</option>
+                                                        <option>2016</option>
+                                                      </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>                            
-
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">Tentang</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input is-link" type="text" placeholder="Find a repository">
+                                </div>                                                     
+    
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Tentang</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input
+                                                    value="{{ old('search4') }}"
+                                                    name="search4"
+                                                    class="input"
+                                                    type="text"
+                                                    placeholder="Filter by Judul"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item has-background-link has-text-white">Cari</a>
-                </footer>
+                    <footer class="card-footer">
+                        <button class="button is-link is-large is-fullwidth">
+                            <span class="icon is-small">
+                                Cari
+                            </span>
+                        </button>
+                    </footer>
+                </form>
             </div>
         </div>
     </section>
 
-    {{-- <section class="columns has-text-centered m-t-100">
-        <div class="column">
-            <h3 class="title is-3">Produk Hukum Terbaru</h3>
-            <div class="ct-section_header-separator"></div>
-        </div>
-    </section> --}}
-
-    {{-- <section class="content">       
-    <section class="container is-centered">
-        <div class="columns is-multiline m-t-20">
-            @foreach ($prokum as $p)
-                <div class="column is-6">
-                    <div class="card card-page-prokum">
-                    <div class="card-header">
-                        <p class="card-header-title">{{ $p->jenis }} ({{ $p->tahun }})</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="columns">
-                            <div class="column is-3">
-                                <img class="card-img-content" src="{{ asset('images/jdih-anambas.png') }}">
-                            </div>
-                            <div class="column is-9">
-                                <p class="judul-page">{{ $p->judul }}</p>
-                                <p>
-                                    @if($p->fileupload) 
-                                        <a href="{{ asset('storage/prokum/'.$p->fileupload) }}" class="button is-success" target="_blank">Download</a></td>
-                                    @else
-                                        File Kosong 
-                                    @endif
-                                </p>
-                                <div class="hr"></div>
-                                <p class="m-t-10"><b>Diposting tanggal: </b>{{date('d F Y', strtotime($p->created_at))}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>            
-            @endforeach   
-        </div>
-    </section>
-    </section> --}}
-
-    <div class="container">
+    {{-- <div class="container">
         <section class="columns has-text-centered m-t-150">
             <div class="column">
                 <h3 class="title is-3">Berita & Informasi</h3>
@@ -179,7 +137,6 @@
                             <div class="card">
                                 <article class="tile is-child notification">
                                 <p class="title">Berita Anambas #1</p>
-                                {{-- <p class="subtitle">Post-1</p> --}}
                                 <p class="has-text-justified">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae dolor quaerat vel magnam! Nisi iure sapiente, fugiat animi, ipsam sed voluptate enim architecto eos repellat doloribus, reprehenderit eligendi sequi veniam omnis nulla provident atque vero cum! Tenetur perspiciatis similique placeat iste deserunt minima labore alias esse. Corrupti,
                                 </p>
@@ -188,7 +145,6 @@
                             <div class="card">
                                 <article class="tile is-child notification">
                                 <p class="title">Berita Anambas #2</p>
-                                {{-- <p class="subtitle">Post-2</p> --}}
                                 <p class="has-text-justified">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, accusamus veniam! Dicta sit, corrupti totam rem necessitatibus delectus nihil quidem. Dolor harum, quos, distinctio quis minus, veniam hic dignissimos omnis nemo autem blanditiis officiis eligendi. Vitae sapiente veritatis libero voluptatum harum! Reprehenderit earum voluptates expedita inventore doloribus aliquid ab nam.
                                 </p>
@@ -215,9 +171,6 @@
                                 <p class="has-text-justified">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae dolor quaerat vel magnam! Nisi iure sapiente, fugiat animi, ipsam sed voluptate enim architecto eos repellat doloribus, reprehenderit eligendi sequi veniam omnis nulla provident atque vero cum! Tenetur perspiciatis similique placeat iste deserunt minima labore alias esse. Corrupti,
                                 </p>
-                                {{-- <figure class="image">
-                                    <carousel-widget></carousel-widget>
-                                </figure> --}}
                                 </article>
                             </div>
                         </div>
@@ -226,7 +179,6 @@
                         <div class="card">
                             <article class="tile is-child notification">
                                 <p class="title">Berita Anambas #3</p>
-                                {{-- <p class="subtitle">Post-3</p> --}}
                                 <div class="content">
                                     <p class="has-text-justified">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia soluta molestias autem omnis necessitatibus rerum dolorum, ratione, fuga eos quaerat facere blanditiis quibusdam dicta vitae aliquam praesentium hic, saepe nemo. Quae ea minus beatae ratione rem, dignissimos, fuga labore inventore laborum ducimus repellat dicta voluptatum impedit tenetur aperiam tempore. Repellendus nemo beatae laudantium, possimus quos neque soluta ex dolorem quidem voluptatem distinctio debitis sequi aliquam reiciendis consequatur est harum impedit doloremque voluptas totam adipisci porro recusandae repudiandae officia. Suscipit tempora fugit quas commodi repudiandae? Vel libero dignissimos quo, nobis numquam magnam quae tempore beatae consectetur cumque voluptatum, illum amet molestiae.
@@ -279,7 +231,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> --}}
     
 @endsection
 

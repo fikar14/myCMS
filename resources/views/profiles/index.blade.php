@@ -20,7 +20,59 @@
         
                 <div class="columns">
                     <div class="column is-12">
-                        <profile-component></profile-component>  
+                        <section>
+                            <form action="{{ route('profile.update', $profile->id) }}" 
+                                method="post" 
+                                enctype="multipart/form-data"
+                            >
+                                @csrf
+                                @method('PUT')                                                       
+                                <b-collapse
+                                        aria-id="contentIdForA11y2"
+                                        class="panel"
+                                        :open.sync="isOpen">
+                                    <div
+                                        slot="trigger"
+                                        class="panel-heading"
+                                        role="button"
+                                        aria-controls="contentIdForA11y2">
+                                        <strong>Edit Profile JDIH</strong>
+                                    </div>
+                                    <b-tabs>
+                                        {{-- <b-tab-item label="Visi">
+                                            <blog-post :profile="profile" @profile-changed="updateProfile"></blog-post>
+                                            <input type="hidden" v-model="visi" name="visi" />
+                                        </b-tab-item> --}}
+                                        <b-tab-item label="Visi">
+                                            <textarea class="textarea" rows="20" name="visi">{{ $profile->visi }}</textarea>
+                                        </b-tab-item>                       
+                                        <b-tab-item label="Misi">
+                                            <textarea class="textarea" rows="20" name="misi">{{ $profile->misi }}</textarea>
+                                        </b-tab-item>
+                                        <b-tab-item label="Tugas Pokok">
+                                            <textarea class="textarea" rows="20" name="tugaspokok">{{ $profile->tugaspokok }}</textarea>
+                                        </b-tab-item>
+                                        <b-tab-item label="Tujuan">
+                                            <textarea class="textarea" rows="20" name="tujuan">{{ $profile->tujuan }}</textarea>
+                                        </b-tab-item>
+                                        <b-tab-item label="Fungsi">
+                                            <textarea class="textarea" rows="20" name="fungsi">{{ $profile->fungsi }}</textarea>
+                                        </b-tab-item>                                     
+                                        <b-tab-item label="Struktur Organisasi">
+                                            <input name="struktur" type="file" id="struktur" value="{{ $profile->struktur }}">
+                                        </b-tab-item>
+                                        <b-tab-item label="SOP">
+                                            <textarea class="textarea" rows="20" name="sop">{{ $profile->sop }}</textarea>
+                                        </b-tab-item>
+                                    </b-tabs>
+                                </b-collapse>
+                                <div class="block">                                    
+                                    <button class="button is-link">
+                                        Simpan
+                                    </button>
+                                </div> 
+                            </form>                    
+                        </section>  
                     </div>
                 </div>
             </div>
@@ -34,7 +86,13 @@
         var app = new Vue({
             el:'#app',
             data: {
-
+                isOpen: false,
+                profile: 'apalah bro',
+            },
+            methods: {
+                updateProfile: function(val){
+                    this.profile = val;
+                }
             }
         });
     </script>

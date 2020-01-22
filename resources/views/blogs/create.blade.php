@@ -35,17 +35,6 @@
                                     <blog-post :blog="blog" @blog-changed="updateBlog"></blog-post>
                                     <input type="hidden" v-model="blog" name="blog" />
                                 </div>
-                                {{-- <br>                                
-                                <textarea class="textarea" name="blog" id="blog" rows="30" v-model="blog" placeholder="Make original content don't copy paste!!!">
-                                </textarea>
-                                <b-field>
-                                    <b-input type="textarea"
-                                        name="blog"
-                                        v-model="blog"
-                                        rows="30"
-                                        placeholder="Make original content don't copy paste!!!">
-                                    </b-input>
-                                </b-field> --}}
                             </div>
                             <div class="column is-3">
                                 <div class="columns">
@@ -61,8 +50,8 @@
                                                 </div>
                                                 <div class="field">
                                                     <div class="media-content">
-                                                        <p class="title is-5 has-text-centered">Zulfikar</p>
-                                                        <p class="subtitle is-6 has-text-centered">@fikar14</p>
+                                                        <p class="title is-5 has-text-centered">Admin</p>
+                                                        <p class="subtitle is-6 has-text-centered">@admin</p>
                                                     </div>
                                                 </div>                                             
                                             </div>                                                    

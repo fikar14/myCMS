@@ -236,25 +236,6 @@ class ProkumDaerahController extends Controller
             ])
             ->paginate(10);
         }
-        // elseif($search && $search2 || $search && $search3 || $search && $search4 || $search2 && $search3 || $search2 && $search4 || $search3 && $search4){
-        //     $prokumda = ProkumDaerah::where([
-        //         ['bentuk','like',"%".$search."%"],
-        //         ['no_per','like',"%".$search2."%"],
-        //         ['tahun','like',"%".$search3."%"],
-        //         ['judul','like',"%".$search4."%"],
-        //     ])
-        //     ->paginate(10);
-        // }
-        // elseif($search2){
-        //     $prokumda = ProkumDaerah::where('no_per','like',"%".$search2."%")
-        //     ->paginate(10);
-        // }elseif($search3){
-        //     $prokumda = ProkumDaerah::where('tahun','like',"%".$search3."%")
-        //     ->paginate(10);
-        // }elseif($search4){
-        //     $prokumda = ProkumDaerah::where('judul','like',"%".$search4."%")
-        //     ->paginate(10);
-        // }
         else{
             $prokumda = ProkumDaerah::latest()->paginate(10);
         }

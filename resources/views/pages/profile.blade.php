@@ -30,8 +30,7 @@
                     <h2 class="title-visi">Visi</h2>
                     <br>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, perspiciatis, id quas deleniti nobis adipisci soluta harum. Sit laboriosam, asperiores quos earum quam id veritatis, est voluptatibus maxime aut commodi, hic perspiciatis porro. Alias quia, atque veritatis error recusandae magni porro dolor delectus beatae fugiat! <br><br>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, perspiciatis,
+                        {!! $profile->visi !!}
                     </p>
                 </div>
             </section>   
@@ -40,8 +39,7 @@
                     <h2 class="title-misi">Misi</h2>
                     <br>        
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, perspiciatis, id quas deleniti nobis adipisci soluta harum. Sit laboriosam, asperiores quos earum quam id veritatis, est voluptatibus maxime aut commodi, hic perspiciatis porro. Alias quia, atque veritatis error recusandae magni porro dolor delectus beatae fugiat! <br><br>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati,
+                        {!! $profile->misi !!}
                     </p>
                 </div>
             </section>
@@ -58,7 +56,7 @@
             <div class="column is-4 is-offset-4">
                 <div class="card tupoksi">
                     <div class="card-content">
-                        <ol class= "list-tupoksi">
+                        {{-- <ol class= "list-tupoksi">
                             <li>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, necessitatibus!
                             </li>
@@ -80,7 +78,10 @@
                             <li>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus soluta, similique corrupti commodi laborum nostrum!
                             </li>
-                        </ol>
+                        </ol> --}}
+                        <p class= "list-tupoksi">
+                            {!! $profile->tugaspokok !!}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -96,7 +97,7 @@
         <div class="columns">
             <div class="column is-6 m-l-10">
                 <p class="has-text-left">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, perspiciatis, id quas deleniti nobis adipisci soluta harum.
+                    {!! $profile->tujuan !!}
                 </p>
             </div>
             <div class="column is-6">
@@ -121,7 +122,7 @@
             </div>
             <div class="column is-6 ">
                 <p class="m-r-10 has-text-right">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, 
+                    {!! $profile->fungsi !!}
                 </p>
             </div>
         </div>
@@ -136,7 +137,7 @@
         <div class="columns">
             <div class="column is-8 is-offset-2">
                 <figure class="image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPartTcDuVCjXliqGMGgm2qzOCmQu45Khmn17y7R4M6KHzZqSP">
+                    <img src="{{asset('storage/profile/'.$profile->struktur)}}" />
                 </figure>
             </div>
         </div>  
@@ -148,10 +149,7 @@
         <div class="columns">
             <div class="column is-8 is-offset-2">
                 <p class="has-text-centered">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, perspiciatis, id quas deleniti nobis adipisci soluta harum. Sit laboriosam, asperiores quos earum quam id veritatis, est voluptatibus maxime aut commodi, hic perspiciatis porro. Alias quia, atque veritatis error recusandae magni porro dolor delectus beatae fugiat!
-                </p><br><br>
-                <p class="has-text-centered">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad, soluta quo animi placeat rerum fugiat iusto enim impedit non culpa obcaecati fuga maiores cupiditate quae, dolore nulla nemo eos molestiae? Voluptatem distinctio itaque illum deserunt vero, aperiam sequi incidunt earum nostrum, ea obcaecati, amet debitis enim cupiditate eos animi. Nesciunt, aliquid. Amet, praesentium totam illo eligendi laudantium deserunt eaque autem modi accusantium sed, perspiciatis, id quas deleniti nobis adipisci soluta harum. Sit laboriosam, asperiores quos earum quam id veritatis, est voluptatibus maxime aut commodi, hic perspiciatis porro. Alias quia, atque veritatis error recusandae magni porro dolor delectus beatae fugiat!
+                    {!! $profile->fungsi !!}
                 </p>
             </div>
         </div>

@@ -23,3 +23,8 @@ Route::group(['middleware' => 'auth:api'], function(){
 Route::middleware('auth:api')->group(function () {
     Route::get('/blogs/unique', 'BlogController@apiCheckUnique')->name('api.blogs.unique');
 });
+
+
+Route::group(['prefix' => 'manage',  'middleware' => ['role:SuperAdministrator']], function() {
+    Route::resource('profile', 'ProfileController');    
+});

@@ -26,8 +26,8 @@ Route::group(['prefix' => 'manage',  'middleware' => ['role:SuperAdministrator']
         Route::resource('permissions', 'PermissionController')->except([
             'edit', 'show', 'update'
             ]);
-            Route::resource('profile', 'ProfileController');
-            Route::resource('contact', 'ContactController');
+        Route::resource('contact', 'ContactController');
+        Route::resource('profile', 'ProfileController'); 
         });
 
 //Produk Hukum Desa

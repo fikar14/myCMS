@@ -32,7 +32,7 @@
                                     <tr>
                                         <td>{{ $post->id }}</td>
                                         <td>{{ $post->title }}</td>
-                                        <td>{{ $post->blog }}</td>
+                                        <td>{!! $post->blog !!}</td>
                                         <td>{{ $post->user->name }}</td>
                                         <td>{{ $post->views }}</td>
                                         <td>{{ $post->status }}</td>
